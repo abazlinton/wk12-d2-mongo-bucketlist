@@ -1,3 +1,5 @@
+//wicked
+
 var Country = require('../bucket_list/country');
 
 var BucketListView = function(bucketList) {
