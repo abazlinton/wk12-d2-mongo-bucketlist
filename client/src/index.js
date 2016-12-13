@@ -2,8 +2,6 @@ var BucketListView = require("./views/bucket_list_view.js");
 var BucketList = require("./bucket_list/bucket_list.js");
 var Country = require("./bucket_list/country");
 
-// var sampleAccounts = require('./sample.json');
-
 var countries;
 
 window.onload = function() {
@@ -13,14 +11,11 @@ window.onload = function() {
   makeRequest(url, requestComplete);
   var bucketList = new BucketList();
   var bucketListView = new BucketListView(countries);
-  var addButton = document.getElementById('add-country');
 
-  addButton.onclick = function(){
-    var countrySelect = document.getElementById('country-select');
-    var countrySelectedIndex = countrySelect.value;
-    var country = new Country(countries[parseInt(countrySelectedIndex)])
-    bucketList.addCountry(country);
-  };
+  var countrySelect = document.getElementById('country-select');
+  var countrySelectedIndex = countrySelect.value;
+  var country = new Country(countries[parseInt(countrySelectedIndex)]);
+};
 
 
   // var bank = new Bank();

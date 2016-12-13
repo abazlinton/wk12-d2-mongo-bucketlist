@@ -1,7 +1,6 @@
 {
   "name": "webpack_bank_refactored",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,5 +12,14 @@
     "body-parser": "^1.15.2",
     "express": "^4.13.4",
     "mongodb": "^2.2.15"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomascrines/wk12-d2-mongo-bucketlist.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thomascrines/wk12-d2-mongo-bucketlist/issues"
+  },
+  "homepage": "https://github.com/thomascrines/wk12-d2-mongo-bucketlist#readme",
+  "description": ""
 }

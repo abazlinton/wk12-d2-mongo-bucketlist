@@ -1,5 +1,5 @@
-var Country = function(data) {
-  this.data = data;
+var Country = function(params) {
+  this.data = params.data;
   this.visited = false;
 };
 
