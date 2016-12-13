@@ -16,41 +16,13 @@ window.onload = function() {
     form.onsubmit = function(e){
       var countrySelect = document.getElementById('country-select');
       var countrySelectedIndex = countrySelect.value;
-      var country = new Country(countries[parseInt(countrySelectedIndex)]);
+      var country = new Country({data: countries[parseInt(countrySelectedIndex)]});
       e.preventDefault();
       country.save();
-
-      // var account = {
-      //   owner: e.target.owner.value,
-      //   amount: parseFloat(e.target.amount.value),
-      //   type: e.target.type.value
-      // };
     };
 
 
 };
-
-
-  // var bank = new Bank();
-  //
-  // var url = "http://localhost:3000/accounts";
-  //
-  // var request = new XMLHttpRequest();
-  // request.open('GET', url);
-  // request.onload = function(){
-  //   if (request.status == 200){
-  //     var sampleAccounts = JSON.parse(request.responseText);
-  //     for(account of sampleAccounts) {
-  //       bank.addAccount(new Account(account));
-  //     }
-  //     var bankView = new BankView(bank);
-  //     bankView.bindEvents();
-  //     bankView.render();
-  //   };
-  // };
-  // request.send();
-
-
 
 var makeRequest = function(url, callback){
   var request = new XMLHttpRequest();
@@ -74,6 +46,4 @@ var populateList = function(countries){
       option.value = i;
       select.appendChild(option);
     };
-
-
 }.bind(this);

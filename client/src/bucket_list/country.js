@@ -1,7 +1,10 @@
-var Country = function(data) {
-  this.data = data;
-  this.visited = false;
-};
+var Country = function(params) {
+  this.data = params.data;
+  console.log(params.visited);
+  if (params.visited === undefined) {
+    this.visited = false;
+  };
+}
 
 
 Country.prototype = {

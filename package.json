@@ -14,12 +14,12 @@
     "mongodb": "^2.2.15"
   },
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/thomascrines/wk12-d2-mongo-bucketlist.git"
+    "type": "",
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/thomascrines/wk12-d2-mongo-bucketlist/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/thomascrines/wk12-d2-mongo-bucketlist#readme",
+  "homepage": "",
   "description": ""
 }
