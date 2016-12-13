@@ -28,7 +28,8 @@ app.get('/countries', function(req, res) {
       var collection = db.collection('countries');
       collection.insert(
         {
-          data: req.body
+          data: req.body.data,
+          visited: req.body.visited
         }
       );
     res.status(200).end();

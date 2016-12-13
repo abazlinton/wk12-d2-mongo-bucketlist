@@ -12,9 +12,22 @@ window.onload = function() {
   var bucketList = new BucketList();
   var bucketListView = new BucketListView(countries);
 
-  var countrySelect = document.getElementById('country-select');
-  var countrySelectedIndex = countrySelect.value;
-  var country = new Country(countries[parseInt(countrySelectedIndex)]);
+  var form = document.getElementById('add-country');
+    form.onsubmit = function(e){
+      var countrySelect = document.getElementById('country-select');
+      var countrySelectedIndex = countrySelect.value;
+      var country = new Country(countries[parseInt(countrySelectedIndex)]);
+      e.preventDefault();
+      country.save();
+
+      // var account = {
+      //   owner: e.target.owner.value,
+      //   amount: parseFloat(e.target.amount.value),
+      //   type: e.target.type.value
+      // };
+    };
+
+
 };
 
 
@@ -37,7 +50,7 @@ window.onload = function() {
   // };
   // request.send();
 
-};
+
 
 var makeRequest = function(url, callback){
   var request = new XMLHttpRequest();
@@ -51,7 +64,6 @@ var requestComplete = function(){
   var jsonString = this.responseText;
   countries = JSON.parse(jsonString);
   populateList(countries);
-
 };
 
 var populateList = function(countries){
@@ -62,4 +74,6 @@ var populateList = function(countries){
       option.value = i;
       select.appendChild(option);
     };
+
+
 }.bind(this);
